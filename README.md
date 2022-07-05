@@ -1,2 +1,0 @@
-# kelapa
-cccoba registry
