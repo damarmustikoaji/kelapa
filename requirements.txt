@@ -1,4 +1,0 @@
-robotframework
-selenium
-robotframework-browsermobproxylibrary
-robotframework-seleniumlibrary
