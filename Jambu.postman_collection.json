@@ -16,8 +16,8 @@
 							"pm.test(\"Status code is 200\", function () {",
 							"    pm.response.to.have.status(200);",
 							"});",
-							"pm.test(\"Response time is less than 500ms\", function () {",
-							"    pm.expect(pm.response.responseTime).to.be.below(00);",
+							"pm.test(\"Response time is less than 1000ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(1000);",
 							"});"
 						],
 						"type": "text/javascript"
@@ -29,8 +29,11 @@
 				"header": [],
 				"url": {
 					"raw": "https://cobapi.herokuapp.com/v1/ping",
+					"protocol": "https",
 					"host": [
-						"https://cobapi.herokuapp.com"
+						"cobapi",
+						"herokuapp",
+						"com"
 					],
 					"path": [
 						"v1",
@@ -47,12 +50,7 @@
 					"listen": "test",
 					"script": {
 						"exec": [
-							"pm.test(\"Status code is 200\", function () {",
-							"    pm.response.to.have.status(200);",
-							"});",
-							"pm.test(\"Response time is less than 500ms\", function () {",
-							"    pm.expect(pm.response.responseTime).to.be.below(00);",
-							"});"
+							""
 						],
 						"type": "text/javascript"
 					}
@@ -63,8 +61,11 @@
 				"header": [],
 				"url": {
 					"raw": "https://cobapi.herokuapp.com/v1/employees",
+					"protocol": "https",
 					"host": [
-						"https://cobapi.herokuapp.com"
+						"cobapi",
+						"herokuapp",
+						"com"
 					],
 					"path": [
 						"v1",
@@ -81,12 +82,7 @@
 					"listen": "test",
 					"script": {
 						"exec": [
-							"pm.test(\"Status code is 200\", function () {",
-							"    pm.response.to.have.status(200);",
-							"});",
-							"pm.test(\"Response time is less than 500ms\", function () {",
-							"    pm.expect(pm.response.responseTime).to.be.below(00);",
-							"});"
+							""
 						],
 						"type": "text/javascript"
 					}
@@ -97,8 +93,11 @@
 				"header": [],
 				"url": {
 					"raw": "https://cobapi.herokuapp.com/v1/employees/64",
+					"protocol": "https",
 					"host": [
-						"https://cobapi.herokuapp.com"
+						"cobapi",
+						"herokuapp",
+						"com"
 					],
 					"path": [
 						"v1",
