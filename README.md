@@ -1,3 +1,5 @@
+[![Test-Build-Postman](https://github.com/damarmustikoaji/kelapa/actions/workflows/main.yml/badge.svg?branch=master)](https://github.com/damarmustikoaji/kelapa/actions/workflows/main.yml)
+
 # kelapa
 API Automation Testing using Postman Collection - Newman
 
