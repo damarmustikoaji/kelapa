@@ -4,7 +4,7 @@
   "description": "[![Test-Build-Postman](https://github.com/damarmustikoaji/kelapa/actions/workflows/main.yml/badge.svg?branch=master)](https://github.com/damarmustikoaji/kelapa/actions/workflows/main.yml)",
   "main": "index.js",
   "scripts": {
-    "test": "newman run Jambu.postman_collection.json -e Jambu.postman_environment.json --bail -r htmlextra --reporter-htmlextra-export reports/html_report.html --reporter-htmlextra-darkTheme  > reports/run_report.html"
+    "test": "newman run Jambu.postman_collection.json -e Jambu.postman_environment.json --bail -r htmlextra --reporter-htmlextra-export reports/html_report.html --reporter-htmlextra-darkTheme"
   },
   "repository": {
     "type": "git",
