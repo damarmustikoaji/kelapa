@@ -16,8 +16,8 @@
 							"pm.test(\"Status code is 200\", function () {",
 							"    pm.response.to.have.status(200);",
 							"});",
-							"pm.test(\"Response time is less than 1000ms\", function () {",
-							"    pm.expect(pm.response.responseTime).to.be.below(1000);",
+							"pm.test(\"Response time is less than 2000ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(2000);",
 							"});"
 						],
 						"type": "text/javascript"
@@ -28,12 +28,9 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://cobapi.herokuapp.com/v1/ping",
-					"protocol": "https",
+					"raw": "{{URL}}/v1/ping",
 					"host": [
-						"cobapi",
-						"herokuapp",
-						"com"
+						"{{URL}}"
 					],
 					"path": [
 						"v1",
@@ -53,7 +50,7 @@
 							"pm.test(\"Status code is 200\", function () {",
 							"    pm.response.to.have.status(200);",
 							"});",
-							"pm.test(\"Response time is less than 1000ms\", function () {",
+							"pm.test(\"Response time is less than 2000ms\", function () {",
 							"    pm.expect(pm.response.responseTime).to.be.below(1000);",
 							"});"
 						],
@@ -65,12 +62,9 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://cobapi.herokuapp.com/v1/employees",
-					"protocol": "https",
+					"raw": "{{URL}}/v1/employees",
 					"host": [
-						"cobapi",
-						"herokuapp",
-						"com"
+						"{{URL}}"
 					],
 					"path": [
 						"v1",
@@ -90,8 +84,8 @@
 							"pm.test(\"Status code is 200\", function () {",
 							"    pm.response.to.have.status(200);",
 							"});",
-							"pm.test(\"Response time is less than 1000ms\", function () {",
-							"    pm.expect(pm.response.responseTime).to.be.below(1000);",
+							"pm.test(\"Response time is less than 2000ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(2000);",
 							"});"
 						],
 						"type": "text/javascript"
@@ -102,12 +96,9 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://cobapi.herokuapp.com/v1/employees/64",
-					"protocol": "https",
+					"raw": "{{URL}}/v1/employees/64",
 					"host": [
-						"cobapi",
-						"herokuapp",
-						"com"
+						"{{URL}}"
 					],
 					"path": [
 						"v1",

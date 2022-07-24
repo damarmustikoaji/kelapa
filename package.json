@@ -1,0 +1,24 @@
+{
+  "name": "kelapa",
+  "version": "1.0.0",
+  "description": "[![Test-Build-Postman](https://github.com/damarmustikoaji/kelapa/actions/workflows/main.yml/badge.svg?branch=master)](https://github.com/damarmustikoaji/kelapa/actions/workflows/main.yml)",
+  "main": "index.js",
+  "scripts": {
+    "test": "newman run Jambu.postman_collection.json -e Jambu.postman_environment.json --bail -r htmlextra --reporter-htmlextra-export reports/html_report.html --reporter-htmlextra-darkTheme  > reports/run_report.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/damarmustikoaji/kelapa.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/damarmustikoaji/kelapa/issues"
+  },
+  "homepage": "https://github.com/damarmustikoaji/kelapa#readme",
+  "dependencies": {
+    "newman": "^5.3.2",
+    "newman-reporter-htmlextra": "^1.22.10"
+  }
+}

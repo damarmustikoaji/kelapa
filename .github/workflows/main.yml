@@ -1,13 +1,11 @@
-name: Test-Build-Postman
+name: Build-Postman-Newman
 on:
   push:
-    branches: [ master ]
-  pull_request:
     branches: [ master ]
   schedule:
     - cron:  '30 07 * * 1-5'
 jobs:
-  test-api-postman:
+  test-api:
     runs-on: ubuntu-latest
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
@@ -18,30 +16,42 @@ jobs:
       - name: Install Node
         uses: actions/setup-node@v1
         with:
-          node-version: "12.x"
+          node-version: "16.x"
+
+
+      # Get current time for reports artiffacts
+      - name: Get current time
+        uses: josStorer/get-current-time@v2
+        id: current-time
+        with:
+          format: YYYYMMDD-HH.MM
+          utcOffset: "+07:00"
+      - name: Use current time
+        env:
+          F_TIME: "${{ steps.current-time.outputs.formattedTime }}"
+        run: echo Reports $F_TIME
 
 
       # Install the newman command line utility and also install the html extra reporter
-      - name: Install newman
+      - name: Install
         run: |
-          npm install -g newman
-          npm install -g newman-reporter-htmlextra
+          npm install
 
 
       # Make directory to upload the test results
       - name: Make Directory for results
-        run: mkdir -p testResults
+        run: mkdir -p reports
 
 
       # Run the POSTMAN collection
       - name: Run POSTMAN collection
         run: |
-          newman run Jambu.postman_collection.json -r htmlextra --reporter-htmlextra-export testResults/htmlreport.html --reporter-htmlextra-darkTheme  > testResults/runreport1.html
+          npm run test
 
 
       # Upload the contents of Test Results directory to workspace
       - name: Output the run Details
         uses: actions/upload-artifact@v2
         with:
-          name: Reports
-          path: testResults
+          name: Reports ${{ steps.current-time.outputs.formattedTime }}
+          path: reports
