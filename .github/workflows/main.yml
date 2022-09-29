@@ -46,6 +46,7 @@ jobs:
       # Run the POSTMAN collection
       - name: Run POSTMAN collection
         run: |
+          npm run newmman-test
           npm run test
 
 
