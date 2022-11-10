@@ -45,9 +45,7 @@ jobs:
 
       # Run the POSTMAN collection
       - name: Run POSTMAN collection
-        run: |
-          npm run newmman-test
-          npm run test
+        run: npm run test
 
 
       # Upload the contents of Test Results directory to workspace
