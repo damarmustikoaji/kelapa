@@ -25,16 +25,16 @@ jobs:
 
 
       # Get current time for reports artiffacts
-      - name: Get current time
-        uses: josStorer/get-current-time@v3
-        id: current-time
-        with:
-          format: YYYYMMDD-HH.MM
-          utcOffset: "+07:00"
-      - name: Use current time
-        env:
-          F_TIME: "${{ steps.current-time.outputs.formattedTime }}"
-        run: echo Reports $F_TIME
+#       - name: Get current time
+#         uses: josStorer/get-current-time@v2
+#         id: current-time
+#         with:
+#           format: YYYYMMDD-HH.MM
+#           utcOffset: "+07:00"
+#       - name: Use current time
+#         env:
+#           F_TIME: "${{ steps.current-time.outputs.formattedTime }}"
+#         run: echo Reports $F_TIME
 
 
       # Install the newman command line utility and also install the html extra reporter
@@ -57,5 +57,6 @@ jobs:
       - name: Output the run Details
         uses: actions/upload-artifact@v3
         with:
-          name: Reports ${{ steps.current-time.outputs.formattedTime }}
+#           name: Reports ${{ steps.current-time.outputs.formattedTime }}
+          name: Reports
           path: reports
